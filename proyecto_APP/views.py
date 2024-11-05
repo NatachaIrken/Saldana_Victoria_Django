@@ -12,13 +12,15 @@ def listaPersona(request):
 
 def agregarPersona(request):
     if request.method == 'POST':
-        form = FormPersona(request.POST)
-        if form.is_valid():
-            form.save()
+        formP = FormPersona(request.POST)
+        if formP.is_valid():
+            formP.save()
             return redirect('listar_personas')  
     else:
-        form = FormPersona()
-    return render(request, 'agregarPersonas.html', {'form': form})  
+        formP = FormPersona() 
+    return render(request, 'agregarPersonas.html', {'formP': formP})
+
+
 
 def eliminarPersona(request, id):
     try:

@@ -20,8 +20,10 @@ from proyecto_APP import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name='index'), 
     path('', views.listaPersona, name='listar_personas'),  
-    path('agregar/', views.agregarPersona, name='agregar_persona'),  
-    path('eliminar/<int:id>/', views.eliminarPersona, name='eliminar_persona'),  
-    path('actualizar/<int:id>/', views.actualizarPersona, name='actualizar_persona'),  
+    path('agregar/', views.agregarPersona, name='agregar_persona'), 
+    path('listarP/', views.listaPersona, name='listar_personas'),  
+    path('eliminar/<int:id>/', views.eliminarPersona, name='eliminar_persona'),
+    path('actualizar/<int:id>/', views.actualizarPersona, name='actualizar_persona'),
 ]
