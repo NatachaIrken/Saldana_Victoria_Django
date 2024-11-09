@@ -48,5 +48,4 @@ def actualizarPersona(request, id):
     else:
         form = FormPersona(instance=persona)
 
-    return render(request, 'actualizarPersonas.html', {'form': form, 'persona': persona}) 
-
+    return render(request, 'actualizarPersonas.html', {'form': form, 'persona': persona})
